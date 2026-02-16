@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>proxyブラウザ</title>
+</head>
+<body>
+  <h1>簡易Webブラウザ</h1>
+  <input type="text" id="urlInput" placeholder="https://example.com">
+  <button onclick="loadPage()">開く</button>
+  <br><br>
+  <iframe id="viewer" width="100%" height="600px"></iframe>
+
+  <script>
+    function loadPage() {
+      const url = document.getElementById("urlInput").value;
+      document.getElementById("viewer").src = url;
+    }
+  </script>
+</body>
+</html>
